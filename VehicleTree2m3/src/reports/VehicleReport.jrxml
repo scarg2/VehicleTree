@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="VehicleReport" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="caa4d77a-ca78-4c38-a72d-a66420437a0b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="make" class="java.lang.String"/>
+	<field name="model" class="java.lang.String"/>
+	<field name="stockNumber" class="java.lang.Integer"/>
+	<field name="year" class="java.lang.Integer"/>
+	<field name="style" class="java.lang.String"/>
+	<field name="vin" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="250" y="24" width="100" height="30" uuid="32416547-beac-4e86-8914-fed51d71d66e"/>
+				<text><![CDATA[2m3 group Cars]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="250" y="8" width="100" height="30" uuid="d547ddf8-7c33-4527-b1cd-3d30efc0230c"/>
+				<text><![CDATA[Available Cars]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="10" width="612" height="60" backcolor="#EEE1F2" uuid="f9a310b7-9f22-4fc6-9d74-55a7c7015bef"/>
+				<graphicElement>
+					<pen lineColor="#EFDEFA"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="120" y="50" width="100" height="30" uuid="9b4fbe3f-434e-46d4-9371-fd973a793bf9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9a6ce07-e307-41d9-a082-a6d4dfdab042"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[make]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="100" height="30" uuid="c1e68984-c0b2-4faf-a903-806fcabae5d7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd7f3ebd-6d21-4dbd-bc29-b14517e8c1e2"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[stockNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="50" width="100" height="30" uuid="d733a663-44fb-413e-88b0-6e4c8154016d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36569627-407c-4c50-9137-45fcdd5a757c"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[model]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="50" width="100" height="30" uuid="deabfb8d-fb64-4127-896a-f8e816cb514f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="246c8649-dd6e-41c3-922c-aa33a9724ab8"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[year]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="0" width="100" height="30" uuid="b11dac84-e3b6-417d-bff1-4d00f01e8ead">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b9a6ce07-e307-41d9-a082-a6d4dfdab042"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{make}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="f10bb2d5-386f-43a5-aa30-879834ce0247">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd7f3ebd-6d21-4dbd-bc29-b14517e8c1e2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{stockNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="30" uuid="1d9faa2b-0bb4-48ed-8c06-bb0261857c9a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36569627-407c-4c50-9137-45fcdd5a757c"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="100" height="30" uuid="99a50691-6784-49f4-a794-fd5407e3505e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="246c8649-dd6e-41c3-922c-aa33a9724ab8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
